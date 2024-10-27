@@ -1,53 +1,76 @@
 body {
-     background-color: hsl(212 45% 89%);
-     display: flex;
-     justify-content: center;
-     height: 100vh;
-     margin: 0;
-    font-family: "outfit";
-
-     font-size: 15px;
- }
- 
- main {
+    background-color: hsl(212 45% 89%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "outfit", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    }
     
-     margin-top: 18vh;
- }
- 
- .card {
-     background-color: hsl( 0 0% 100%);
-     text-align: end;
-     padding: 15px;
-     max-width: 300px;
-     border-radius: 15px; 
-     height: 470px;
- }
- 
- 
- 
- .code img{
-     justify-content: center;
-     width: 100%;
-     height: 100%;
-     border-radius: 10px;
- }
- 
- .card h2{
-     color: hsl(218, 44%, 22%);
-     text-align: center;
-     font-size: 23px;
-     margin-top: 15px;
- }
- 
- .card p {
-     color: hsl(216, 15%, 48%); 
-     text-align: center;
-     font-size: 16px;
-     margin-top: 20px;
- }
- 
- .attribution{
-     display: flex;
-     justify-content: space-between;
-     margin: 5px;
- }
+    .card {
+    background-color: hsl( 0 0% 100%);
+    text-align: end;
+    padding: 15px;
+    max-width: 90%;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .card-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+    
+    .code img{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    }
+    
+    .card h2{
+    color: hsl(218, 44%, 22%);
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 700;
+    }
+    
+    .card p {
+    color: hsl(216, 15%, 48%);
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    }
+    
+    .attribution{
+    max-width: 280px;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5px auto;
+    }
+    
+    .attribution p{
+    opacity: 0.2;
+    transition: opacity 0.3s;
+    color: hsl(228, 45%, 44%);
+    }
+    
+    .attribution p:hover{
+    opacity: 1;
+    }
+    
+    @media (min-width: 1024px){
+    .attribution p{
+    opacity: 0;
+    }
+    }
